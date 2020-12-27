@@ -37,6 +37,7 @@
         </div>
       </div>
     </div>
+    
   
 
       <div class="form-row font-weight-bold">
@@ -51,6 +52,7 @@
         </div>
         
       </div>
+      
       <!--[(ngModel)]="candidate.phone"-->
       <div class="form-group col-sm-6 col-12">
         <label for="phone">Mobile Number</label>
@@ -65,7 +67,7 @@
         </div>
  
       </div>
-    </div>
+    
 
       <div class="form-row font-weight-bold">
       <div class="form-group col-sm-6 col-12">
@@ -95,15 +97,9 @@
               </div>
           </div>
       </fieldset>
-    </div>
-     
-      <div class="form-row font-weight-bold">
-      <div class="form-group col-sm-6 col-12">
-        <label for="company">Current company name</label>
-        <input type="text" class="form-control" id="company"  min="15" placeholder="enter the company name" required [(ngModel)]="candidate.company" name="company" 
-         #company="ngModel" [class.is-invalid]="company.invalid && company.touched">
-         <small class="text-danger" [class.d-none]="company.valid || company.untouched">Company Name is required</small>
       </div>
+     
+      
 
       <div class="form-group col-sm-6 col-12">
         <label for="current_location">Current Location</label>
@@ -111,31 +107,16 @@
          name="current_location" #current_location="ngModel" [class.is-invalid]="current_location.invalid && current_location.touched">
          <small class="text-danger" [class.d-none]="current_location.valid || current_location.untouched">Current Location is required</small>
       </div>
-    </div>
+  
      
       <div class="form-row font-weight-bold">
       <div class="form-group col-sm-6 col-12">
         <label for=" birth_date">Birth Date</label>
         <input type="date" class="form-control" id=" birth_date" required [(ngModel)]="candidate.birth_date" name="birth_date">
       </div>
-
-      <div class="form-group col-sm-6 col-12">
-        <label for="qualification">Last Qualification</label>
-        <input type="text" class="form-control" id="qualification" placeholder="enter your qualification" required [(ngModel)]="candidate.qualification" name="qualification">
-      </div>
+     </div>
     </div>
-
-      <div class="form-row font-weight-bold">
-      <div class="form-group col-sm-6 col-12">
-        <label for=" experience"> Total Experience in years</label>
-        <input type="number" class="form-control" id="experience" placeholder="enter your experience" required [(ngModel)]="candidate.experience" name="experience">
-      </div>
-          <div class="form-group col-sm-6 col-12">
-        <label for=" upload_file">Upload Resume</label>
-        <input type="file" class="form-control" id="upload_file "/>
-      </div>
-          
-    </div>
+  
 
     <button [disabled]="profileform.form.invalid" type="submit" mat-raised-button color="accent">ADD</button>
          <button type="submit" mat-raised-button color="accent" class="ml-5" (click)="backTohome()">CANCEL</button>
